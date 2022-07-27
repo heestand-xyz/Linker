@@ -10,21 +10,11 @@
 		D3074A3C28915A6900062B45 /* LinkerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A3B28915A6900062B45 /* LinkerApp.swift */; };
 		D3074A3E28915A6900062B45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A3D28915A6900062B45 /* ContentView.swift */; };
 		D3074A4028915A6B00062B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3074A3F28915A6B00062B45 /* Assets.xcassets */; };
-		D3074A4328915A6B00062B45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3074A4228915A6B00062B45 /* Preview Assets.xcassets */; };
 		D3074A4D28915A6B00062B45 /* LinkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A4C28915A6B00062B45 /* LinkerTests.swift */; };
-		D3074A5728915A6B00062B45 /* LinkerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A5628915A6B00062B45 /* LinkerUITests.swift */; };
-		D3074A5928915A6B00062B45 /* LinkerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A5828915A6B00062B45 /* LinkerUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		D3074A4928915A6B00062B45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D3074A3028915A6900062B45 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D3074A3728915A6900062B45;
-			remoteInfo = Linker;
-		};
-		D3074A5328915A6B00062B45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D3074A3028915A6900062B45 /* Project object */;
 			proxyType = 1;
@@ -38,12 +28,8 @@
 		D3074A3B28915A6900062B45 /* LinkerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerApp.swift; sourceTree = "<group>"; };
 		D3074A3D28915A6900062B45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D3074A3F28915A6B00062B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D3074A4228915A6B00062B45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3074A4828915A6B00062B45 /* LinkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3074A4C28915A6B00062B45 /* LinkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerTests.swift; sourceTree = "<group>"; };
-		D3074A5228915A6B00062B45 /* LinkerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3074A5628915A6B00062B45 /* LinkerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerUITests.swift; sourceTree = "<group>"; };
-		D3074A5828915A6B00062B45 /* LinkerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +47,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3074A4F28915A6B00062B45 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +55,6 @@
 			children = (
 				D3074A3A28915A6900062B45 /* Linker */,
 				D3074A4B28915A6B00062B45 /* LinkerTests */,
-				D3074A5528915A6B00062B45 /* LinkerUITests */,
 				D3074A3928915A6900062B45 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +64,6 @@
 			children = (
 				D3074A3828915A6900062B45 /* Linker.app */,
 				D3074A4828915A6B00062B45 /* LinkerTests.xctest */,
-				D3074A5228915A6B00062B45 /* LinkerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,17 +74,8 @@
 				D3074A3B28915A6900062B45 /* LinkerApp.swift */,
 				D3074A3D28915A6900062B45 /* ContentView.swift */,
 				D3074A3F28915A6B00062B45 /* Assets.xcassets */,
-				D3074A4128915A6B00062B45 /* Preview Content */,
 			);
 			path = Linker;
-			sourceTree = "<group>";
-		};
-		D3074A4128915A6B00062B45 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				D3074A4228915A6B00062B45 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		D3074A4B28915A6B00062B45 /* LinkerTests */ = {
@@ -116,15 +84,6 @@
 				D3074A4C28915A6B00062B45 /* LinkerTests.swift */,
 			);
 			path = LinkerTests;
-			sourceTree = "<group>";
-		};
-		D3074A5528915A6B00062B45 /* LinkerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D3074A5628915A6B00062B45 /* LinkerUITests.swift */,
-				D3074A5828915A6B00062B45 /* LinkerUITestsLaunchTests.swift */,
-			);
-			path = LinkerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +124,6 @@
 			productReference = D3074A4828915A6B00062B45 /* LinkerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D3074A5128915A6B00062B45 /* LinkerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D3074A6228915A6B00062B45 /* Build configuration list for PBXNativeTarget "LinkerUITests" */;
-			buildPhases = (
-				D3074A4E28915A6B00062B45 /* Sources */,
-				D3074A4F28915A6B00062B45 /* Frameworks */,
-				D3074A5028915A6B00062B45 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D3074A5428915A6B00062B45 /* PBXTargetDependency */,
-			);
-			name = LinkerUITests;
-			productName = LinkerUITests;
-			productReference = D3074A5228915A6B00062B45 /* LinkerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +138,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					D3074A4728915A6B00062B45 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = D3074A3728915A6900062B45;
-					};
-					D3074A5128915A6B00062B45 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = D3074A3728915A6900062B45;
 					};
@@ -221,7 +158,6 @@
 			targets = (
 				D3074A3728915A6900062B45 /* Linker */,
 				D3074A4728915A6B00062B45 /* LinkerTests */,
-				D3074A5128915A6B00062B45 /* LinkerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,19 +167,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3074A4328915A6B00062B45 /* Preview Assets.xcassets in Resources */,
 				D3074A4028915A6B00062B45 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D3074A4628915A6B00062B45 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D3074A5028915A6B00062B45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,15 +198,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D3074A4E28915A6B00062B45 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3074A5728915A6B00062B45 /* LinkerUITests.swift in Sources */,
-				D3074A5928915A6B00062B45 /* LinkerUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +205,6 @@
 			isa = PBXTargetDependency;
 			target = D3074A3728915A6900062B45 /* Linker */;
 			targetProxy = D3074A4928915A6B00062B45 /* PBXContainerItemProxy */;
-		};
-		D3074A5428915A6B00062B45 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D3074A3728915A6900062B45 /* Linker */;
-			targetProxy = D3074A5328915A6B00062B45 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -416,25 +330,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Linker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2QHTY6FMW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.heestand.Linker;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.heestand.linker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -445,25 +361,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Linker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 2QHTY6FMW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.heestand.Linker;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.heestand.linker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -507,42 +425,6 @@
 			};
 			name = Release;
 		};
-		D3074A6328915A6B00062B45 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2QHTY6FMW2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.heestand.LinkerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Linker;
-			};
-			name = Debug;
-		};
-		D3074A6428915A6B00062B45 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2QHTY6FMW2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.heestand.LinkerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Linker;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,15 +451,6 @@
 			buildConfigurations = (
 				D3074A6028915A6B00062B45 /* Debug */,
 				D3074A6128915A6B00062B45 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3074A6228915A6B00062B45 /* Build configuration list for PBXNativeTarget "LinkerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D3074A6328915A6B00062B45 /* Debug */,
-				D3074A6428915A6B00062B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
