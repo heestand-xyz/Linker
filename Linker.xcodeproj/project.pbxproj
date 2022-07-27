@@ -11,6 +11,7 @@
 		D3074A3E28915A6900062B45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A3D28915A6900062B45 /* ContentView.swift */; };
 		D3074A4028915A6B00062B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3074A3F28915A6B00062B45 /* Assets.xcassets */; };
 		D3074A4D28915A6B00062B45 /* LinkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A4C28915A6B00062B45 /* LinkerTests.swift */; };
+		D3E8EE7728915B0C0063C2D3 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8EE7628915B0C0063C2D3 /* LinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 		D3074A3F28915A6B00062B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3074A4828915A6B00062B45 /* LinkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3074A4C28915A6B00062B45 /* LinkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerTests.swift; sourceTree = "<group>"; };
+		D3E8EE7628915B0C0063C2D3 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D3074A3B28915A6900062B45 /* LinkerApp.swift */,
-				D3074A3D28915A6900062B45 /* ContentView.swift */,
+				D3E8EE7428915AF40063C2D3 /* Views */,
 				D3074A3F28915A6B00062B45 /* Assets.xcassets */,
 			);
 			path = Linker;
@@ -84,6 +86,23 @@
 				D3074A4C28915A6B00062B45 /* LinkerTests.swift */,
 			);
 			path = LinkerTests;
+			sourceTree = "<group>";
+		};
+		D3E8EE7428915AF40063C2D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3074A3D28915A6900062B45 /* ContentView.swift */,
+				D3E8EE7528915AFA0063C2D3 /* Link */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3E8EE7528915AFA0063C2D3 /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				D3E8EE7628915B0C0063C2D3 /* LinkView.swift */,
+			);
+			path = Link;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3074A3E28915A6900062B45 /* ContentView.swift in Sources */,
+				D3E8EE7728915B0C0063C2D3 /* LinkView.swift in Sources */,
 				D3074A3C28915A6900062B45 /* LinkerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
