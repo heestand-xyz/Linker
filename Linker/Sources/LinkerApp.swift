@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct LinkerApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    @StateObject var auth = AuthServiceManager(service: MockedAuthService())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(auth: auth)
         }
     }
 }

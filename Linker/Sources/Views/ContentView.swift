@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var auth: AuthServiceManager
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        if auth.authenticated {
+            
+            MainView(auth: auth)
+            
+        } else {
+            
+            AuthView(auth: auth)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(auth: .mocked)
     }
 }

@@ -1,0 +1,20 @@
+//
+//  AppDelegate.swift
+//  Linker
+//
+//  Created by Anton Heestand on 2022-07-27.
+//
+
+import UIKit
+import FirebaseCore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        FirebaseApp.configure()
+        
+        return true
+    }
+}
