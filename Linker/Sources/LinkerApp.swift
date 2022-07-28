@@ -12,7 +12,7 @@ struct LinkerApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    @StateObject var auth = AuthServiceManager(service: MockedAuthService())
+    @StateObject var auth = AuthServiceManager(service: MainAuthService())
     
     var body: some Scene {
         WindowGroup {

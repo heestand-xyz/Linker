@@ -37,8 +37,10 @@ struct AuthView: View {
             Group {
                 
                 TextField("Email", text: $email)
+                    .textContentType(.emailAddress)
+                    .autocorrectionDisabled()
                 
-                TextField("Password", text: $password)
+                SecureField("Password", text: $password)
             }
             .disabled(requesting)
             
