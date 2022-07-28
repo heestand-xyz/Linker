@@ -59,13 +59,6 @@ struct AuthView: View {
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.bordered)
-                
-                Button {
-                    resetPassword()
-                } label: {
-                    Text("Forgot password")
-                        .frame(maxWidth: .infinity)
-                }
             }
             .disabled(requesting)
         }
@@ -89,18 +82,6 @@ struct AuthView: View {
         Task {
             do {
                 try await auth.signUp(email: email, password: password)
-            } catch {
-                failed(with: error)
-            }
-            requested()
-        }
-    }
-    
-    private func resetPassword() {
-        request()
-        Task {
-            do {
-                try await auth.resetPassword(email: email)
             } catch {
                 failed(with: error)
             }

@@ -23,6 +23,8 @@
 		D3E8EE8F2891661B0063C2D3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8EE8E2891661B0063C2D3 /* AuthService.swift */; };
 		D3E8EE92289166920063C2D3 /* MockedAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8EE91289166920063C2D3 /* MockedAuthService.swift */; };
 		D3E8EE952891684B0063C2D3 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8EE942891684B0063C2D3 /* AuthView.swift */; };
+		D3FFAFB428929F5E00EB22F4 /* MainAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FFAFB328929F5E00EB22F4 /* MainAuthService.swift */; };
+		D3FFAFB62892A1BB00EB22F4 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FFAFB52892A1BB00EB22F4 /* AuthUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		D3E8EE8E2891661B0063C2D3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D3E8EE91289166920063C2D3 /* MockedAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedAuthService.swift; sourceTree = "<group>"; };
 		D3E8EE942891684B0063C2D3 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		D3FFAFB328929F5E00EB22F4 /* MainAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAuthService.swift; sourceTree = "<group>"; };
+		D3FFAFB52892A1BB00EB22F4 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +175,9 @@
 			children = (
 				D3E8EE8E2891661B0063C2D3 /* AuthService.swift */,
 				D3DC754F28916A6B00A74663 /* AuthServiceManager.swift */,
+				D3FFAFB328929F5E00EB22F4 /* MainAuthService.swift */,
 				D3E8EE91289166920063C2D3 /* MockedAuthService.swift */,
+				D3FFAFB52892A1BB00EB22F4 /* AuthUser.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FFAFB428929F5E00EB22F4 /* MainAuthService.swift in Sources */,
 				D3E8EE952891684B0063C2D3 /* AuthView.swift in Sources */,
 				D378A0B8289170B10052D312 /* MainView.swift in Sources */,
 				D3DC755028916A6B00A74663 /* AuthServiceManager.swift in Sources */,
@@ -302,6 +309,7 @@
 				D3074A3C28915A6900062B45 /* LinkerApp.swift in Sources */,
 				D3E8EE92289166920063C2D3 /* MockedAuthService.swift in Sources */,
 				D3E8EE8F2891661B0063C2D3 /* AuthService.swift in Sources */,
+				D3FFAFB62892A1BB00EB22F4 /* AuthUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

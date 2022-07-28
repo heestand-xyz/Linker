@@ -5,7 +5,7 @@
 //  Created by Anton Heestand on 2022-07-27.
 //
 
-import Foundation
+import UIKit
 import Combine
 
 final class AuthServiceManager: ObservableObject, AuthService {
@@ -13,6 +13,10 @@ final class AuthServiceManager: ObservableObject, AuthService {
     @Published var authenticated: Bool
     
     lazy var authenticatedSubject = CurrentValueSubject<Bool, Never>(authenticated)
+    
+    var user: AuthUser? {
+        service.user
+    }
     
     let service: AuthService
     
@@ -60,8 +64,12 @@ extension AuthServiceManager {
         try await service.signUp(email: email, password: password)
     }
     
-    func resetPassword(email: String) async throws {
-        try await service.resetPassword(email: email)
+    func changePhoto(_ image: UIImage) async throws {
+        try await service.changePhoto(image)
+    }
+    
+    func changeName(_ name: String) async throws {
+        try await service.changeName(name)
     }
 }
 
