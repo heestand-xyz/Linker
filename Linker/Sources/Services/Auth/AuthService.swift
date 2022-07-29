@@ -14,7 +14,8 @@ protocol AuthService {
     var authenticatedSubject: CurrentValueSubject<Bool, Never> { get }
     
     var user: AuthUser? { get }
-    
+    var userSubject: CurrentValueSubject<AuthUser?, Never> { get }
+
     func signIn(email: String, password: String) async throws
     func signOut() async throws
 

@@ -12,10 +12,14 @@ final class AuthServiceManager: ObservableObject, AuthService {
     
     @Published var authenticated: Bool
     
-    lazy var authenticatedSubject = CurrentValueSubject<Bool, Never>(authenticated)
+    var authenticatedSubject: CurrentValueSubject<Bool, Never> {
+        service.authenticatedSubject
+    }
     
-    var user: AuthUser? {
-        service.user
+    @Published var user: AuthUser?
+    
+    var userSubject: CurrentValueSubject<AuthUser?, Never> {
+        service.userSubject
     }
     
     let service: AuthService
@@ -42,6 +46,15 @@ extension AuthServiceManager {
                 
                 DispatchQueue.main.async {
                     self?.authenticated = authenticated
+                }
+            }
+            .store(in: &cancelBag)
+        
+        service.userSubject
+            .sink { [weak self] user in
+                
+                DispatchQueue.main.async {
+                    self?.user = user
                 }
             }
             .store(in: &cancelBag)

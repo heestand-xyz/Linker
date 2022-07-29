@@ -15,10 +15,16 @@ final class MockedAuthService: AuthService {
             authenticatedSubject.value = authenticated
         }
     }
+
+    lazy var authenticatedSubject = CurrentValueSubject<Bool, Never>(false)
     
-    var user: AuthUser?
+    var user: AuthUser? {
+        didSet {
+            userSubject.value = user
+        }
+    }
     
-    lazy var authenticatedSubject = CurrentValueSubject<Bool, Never>(authenticated)
+    lazy var userSubject = CurrentValueSubject<AuthUser?, Never>(nil)
     
     func signIn(email: String, password: String) async throws {
         

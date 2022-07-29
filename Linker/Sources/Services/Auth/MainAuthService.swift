@@ -25,8 +25,11 @@ final class MainAuthService: AuthService {
     var user: AuthUser? {
         didSet {
             authenticated = user != nil
+            userSubject.value = user
         }
     }
+    
+    var userSubject = CurrentValueSubject<AuthUser?, Never>(nil)
     
     init() {
         
@@ -83,8 +86,6 @@ extension MainAuthService {
     func signOut() async throws {
         
         try Auth.auth().signOut()
-        
-        user = nil
     }
     
     func signUp(email: String, password: String) async throws {

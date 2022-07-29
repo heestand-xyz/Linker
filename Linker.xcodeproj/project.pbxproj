@@ -11,6 +11,8 @@
 		D3074A3E28915A6900062B45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A3D28915A6900062B45 /* ContentView.swift */; };
 		D3074A4028915A6B00062B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3074A3F28915A6B00062B45 /* Assets.xcassets */; };
 		D3074A4D28915A6B00062B45 /* LinkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A4C28915A6B00062B45 /* LinkerTests.swift */; };
+		D30C19A4289441DC002561CD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C19A3289441DC002561CD /* SettingsView.swift */; };
+		D30C19A628944212002561CD /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C19A528944212002561CD /* TimelineView.swift */; };
 		D378A0B8289170B10052D312 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D378A0B7289170B10052D312 /* MainView.swift */; };
 		D3DC755028916A6B00A74663 /* AuthServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC754F28916A6B00A74663 /* AuthServiceManager.swift */; };
 		D3E8EE7728915B0C0063C2D3 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8EE7628915B0C0063C2D3 /* LinkView.swift */; };
@@ -44,6 +46,8 @@
 		D3074A3F28915A6B00062B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3074A4828915A6B00062B45 /* LinkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3074A4C28915A6B00062B45 /* LinkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerTests.swift; sourceTree = "<group>"; };
+		D30C19A3289441DC002561CD /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D30C19A528944212002561CD /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		D378A0B7289170B10052D312 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D3DC754D289168FB00A74663 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3DC754F28916A6B00A74663 /* AuthServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceManager.swift; sourceTree = "<group>"; };
@@ -115,20 +119,30 @@
 			path = LinkerTests;
 			sourceTree = "<group>";
 		};
-		D378A0B6289170A60052D312 /* Main */ = {
+		D30C19A728944222002561CD /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D378A0B7289170B10052D312 /* MainView.swift */,
+				D30C19A3289441DC002561CD /* SettingsView.swift */,
 			);
-			path = Main;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D378A0B6289170A60052D312 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				D30C19A528944212002561CD /* TimelineView.swift */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 		D3E8EE7428915AF40063C2D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D3074A3D28915A6900062B45 /* ContentView.swift */,
-				D378A0B6289170A60052D312 /* Main */,
-				D3E8EE93289168430063C2D3 /* Auth */,
+				D3E8EE942891684B0063C2D3 /* AuthView.swift */,
+				D378A0B7289170B10052D312 /* MainView.swift */,
+				D378A0B6289170A60052D312 /* Timeline */,
+				D30C19A728944222002561CD /* Settings */,
 				D3E8EE7528915AFA0063C2D3 /* Link */,
 			);
 			path = Views;
@@ -178,14 +192,6 @@
 				D3FFAFB328929F5E00EB22F4 /* MainAuthService.swift */,
 				D3E8EE91289166920063C2D3 /* MockedAuthService.swift */,
 				D3FFAFB52892A1BB00EB22F4 /* AuthUser.swift */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		D3E8EE93289168430063C2D3 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				D3E8EE942891684B0063C2D3 /* AuthView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -308,8 +314,10 @@
 				D3E8EE7728915B0C0063C2D3 /* LinkView.swift in Sources */,
 				D3074A3C28915A6900062B45 /* LinkerApp.swift in Sources */,
 				D3E8EE92289166920063C2D3 /* MockedAuthService.swift in Sources */,
+				D30C19A4289441DC002561CD /* SettingsView.swift in Sources */,
 				D3E8EE8F2891661B0063C2D3 /* AuthService.swift in Sources */,
 				D3FFAFB62892A1BB00EB22F4 /* AuthUser.swift in Sources */,
+				D30C19A628944212002561CD /* TimelineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
