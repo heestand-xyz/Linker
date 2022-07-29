@@ -31,11 +31,33 @@ struct AuthView: View {
             
             VStack(spacing: 15) {
                 
+                Spacer()
+                    .frame(height: 50)
+                
+                Image(systemName: "link")
+                    .font(.system(size: viewState == .none ? 100 : 75))
+                    .foregroundColor(.accentColor)
+                    .frame(height: 100)
+                
+                Text("Share Links")
+                    .bold()
+                    .foregroundColor(.accentColor)
+                    .opacity(viewState == .none ? 1.0 : 0.0)
+                
+                Spacer()
+                    .frame(height: 75)
+                
                 fields()
                 
                 info()
                 
                 buttons()
+                
+                Spacer()
+                
+                Text("Created by Anton Heestand")
+                    .font(.footnote)
+                    .opacity(0.25)
             }
             .frame(maxWidth: 300)
             .padding(.horizontal)
@@ -140,6 +162,7 @@ struct AuthView: View {
             withAnimation {
                 viewState = .none
             }
+            clear()
         } label: {
             Text("Back")
                 .font(.footnote)
@@ -187,6 +210,12 @@ struct AuthView: View {
     private func failed(with error: Error) {
         withAnimation {
             self.error = error
+        }
+    }
+    
+    private func clear() {
+        withAnimation {
+            error = nil
         }
     }
 }
