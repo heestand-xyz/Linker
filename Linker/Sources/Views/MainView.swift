@@ -23,9 +23,9 @@ struct MainView: View {
                     Image(systemName: "newspaper")
                 }
             
-            SettingsView(auth: auth)
+            AccountView(auth: auth)
                 .tabItem {
-                    Image(systemName: "gear")
+                    Image(systemName: "person")
                 }
         }
     }

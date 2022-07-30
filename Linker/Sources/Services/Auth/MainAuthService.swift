@@ -115,7 +115,6 @@ extension MainAuthService {
         let changeRequest = user.createProfileChangeRequest()
         
         changeRequest.photoURL = url
-        self.user?.photo = image
         
         let _: Void = try await withCheckedThrowingContinuation { continuation in
             
@@ -129,6 +128,8 @@ extension MainAuthService {
                 continuation.resume()
             }
         }
+        
+        self.user?.photo = image
     }
     
     private func uploadPhoto(_ image: UIImage) async throws -> URL {

@@ -1,5 +1,5 @@
 //
-//  SettingsView.swift
+//  AccountView.swift
 //  Linker
 //
 //  Created by Anton Heestand on 2022-07-27.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct AccountView: View {
     
     @ObservedObject var auth: AuthServiceManager
     
@@ -122,7 +122,7 @@ struct SettingsView: View {
                 Spacer()
             }
             .frame(width: 250)
-            .navigationTitle("Settings")
+            .navigationTitle("Account")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     
@@ -186,8 +186,8 @@ struct SettingsView: View {
     }
 }
 
-struct SettingsView_Previews: PreviewProvider {
+struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(auth: .mocked)
+        AccountView(auth: .mocked)
     }
 }

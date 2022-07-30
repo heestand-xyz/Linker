@@ -11,7 +11,7 @@
 		D3074A3E28915A6900062B45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A3D28915A6900062B45 /* ContentView.swift */; };
 		D3074A4028915A6B00062B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3074A3F28915A6B00062B45 /* Assets.xcassets */; };
 		D3074A4D28915A6B00062B45 /* LinkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3074A4C28915A6B00062B45 /* LinkerTests.swift */; };
-		D30C19A4289441DC002561CD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C19A3289441DC002561CD /* SettingsView.swift */; };
+		D30C19A4289441DC002561CD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C19A3289441DC002561CD /* AccountView.swift */; };
 		D30C19A628944212002561CD /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C19A528944212002561CD /* TimelineView.swift */; };
 		D378A0B8289170B10052D312 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D378A0B7289170B10052D312 /* MainView.swift */; };
 		D3DB27A928951A7D00398FD8 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB27A828951A7D00398FD8 /* PhotoView.swift */; };
@@ -49,7 +49,7 @@
 		D3074A3F28915A6B00062B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3074A4828915A6B00062B45 /* LinkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3074A4C28915A6B00062B45 /* LinkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkerTests.swift; sourceTree = "<group>"; };
-		D30C19A3289441DC002561CD /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D30C19A3289441DC002561CD /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		D30C19A528944212002561CD /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		D378A0B7289170B10052D312 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D3DB27A828951A7D00398FD8 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
@@ -125,12 +125,12 @@
 			path = LinkerTests;
 			sourceTree = "<group>";
 		};
-		D30C19A728944222002561CD /* Settings */ = {
+		D30C19A728944222002561CD /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				D30C19A3289441DC002561CD /* SettingsView.swift */,
+				D30C19A3289441DC002561CD /* AccountView.swift */,
 			);
-			path = Settings;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		D378A0B6289170A60052D312 /* Timeline */ = {
@@ -165,7 +165,7 @@
 				D3E8EE942891684B0063C2D3 /* AuthView.swift */,
 				D378A0B7289170B10052D312 /* MainView.swift */,
 				D378A0B6289170A60052D312 /* Timeline */,
-				D30C19A728944222002561CD /* Settings */,
+				D30C19A728944222002561CD /* Account */,
 				D3E8EE7528915AFA0063C2D3 /* Link */,
 				D3DB27A728951A7100398FD8 /* Shared */,
 			);
@@ -340,7 +340,7 @@
 				D3074A3C28915A6900062B45 /* LinkerApp.swift in Sources */,
 				D3E8EE92289166920063C2D3 /* MockedAuthService.swift in Sources */,
 				D3DB27A928951A7D00398FD8 /* PhotoView.swift in Sources */,
-				D30C19A4289441DC002561CD /* SettingsView.swift in Sources */,
+				D30C19A4289441DC002561CD /* AccountView.swift in Sources */,
 				D3E8EE8F2891661B0063C2D3 /* AuthService.swift in Sources */,
 				D3FFAFB62892A1BB00EB22F4 /* AuthUser.swift in Sources */,
 				D3DB27AE28951FF200398FD8 /* UIImage+resize.swift in Sources */,
