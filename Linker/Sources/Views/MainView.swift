@@ -22,12 +22,20 @@ struct MainView: View {
             
             TimelineView(content: content)
                 .tabItem {
-                    Image(systemName: "newspaper")
+                    Label {
+                        Text("Timeline")
+                    } icon: {
+                        Image(systemName: "newspaper")
+                    }
                 }
             
             AccountView(auth: auth)
                 .tabItem {
-                    Image(systemName: "person")
+                    Label {
+                        Text("Account")
+                    } icon: {
+                        Image(systemName: "person")
+                    }
                 }
         }
     }

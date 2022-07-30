@@ -12,7 +12,21 @@ struct PostView: View {
     let post: Post
     
     var body: some View {
-        Text(post.text)
+        
+        VStack(alignment: .leading) {
+            
+            Text(post.text)
+            
+            LinkView(url: post.url)
+            
+            HStack {
+                Spacer()
+                Text("by \(post.user.name)")
+                    .opacity(0.5)
+            }
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

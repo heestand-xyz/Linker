@@ -36,12 +36,20 @@ struct LinkView: UIViewRepresentable {
             
             metadataProvider = LPMetadataProvider()
             
-            metadataProvider.startFetchingMetadata(for: url) { [weak self] metadata, error in
-                guard error == nil,
-                      let metadata = metadata else {
-                    return
+            DispatchQueue.global(qos: .background).async { [weak self] in
+                
+                self?.metadataProvider.startFetchingMetadata(for: url) { metadata, error in
+    
+                    guard error == nil,
+                          let metadata = metadata else {
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+    
+                        self?.metadataCallback?(metadata)
+                    }
                 }
-                self?.metadataCallback?(metadata)
             }
         }
     }

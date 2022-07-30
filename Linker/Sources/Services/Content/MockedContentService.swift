@@ -10,7 +10,7 @@ import Combine
 
 final class MockedContentService: ContentService {
     
-    var posts: [Post] = [.mocked] {
+    var posts: [Post] = .mocked {
         didSet {
             postsSubject.value = posts
         }

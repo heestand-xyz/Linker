@@ -9,7 +9,11 @@ import Foundation
 
 struct Post: Identifiable {
     
-    let userID: String
+    struct User {
+        let name: String
+        let id: String
+    }
+    let user: User
 
     let date: Date
     var id: Date {
@@ -22,8 +26,26 @@ struct Post: Identifiable {
 
 extension Post {
     
-    static let mocked = Post(userID: "test",
+    static let mocked = Post(user: Post.User(name: "Tester", id: "test"),
                              date: .now,
                              url: URL(string: "https://google.com/")!,
                              text: "Test")
+}
+
+extension Array where Element == Post {
+    
+    static let mocked: [Post] = [
+        Post(user: Post.User(name: "Tester", id: "test"),
+             date: .now,
+             url: URL(string: "https://google.com/")!,
+             text: "Google Test"),
+        Post(user: Post.User(name: "Tester", id: "test"),
+             date: .now,
+             url: URL(string: "https://apple.com/")!,
+             text: "Apple Test"),
+        Post(user: Post.User(name: "Tester", id: "test"),
+             date: .now,
+             url: URL(string: "https://nanameue.jp/")!,
+             text: "Hellor"),
+    ]
 }

@@ -15,12 +15,15 @@ struct TimelineView: View {
     
         NavigationView {
             
-            List {
-                ForEach(content.posts) { post in
-                    PostView(post: post)
+            ScrollView {
+                VStack {
+                    ForEach(content.posts) { post in
+                        PostView(post: post)
+                        Divider()
+                    }
                 }
             }
-            .navigationTitle("Linker")
+            .navigationTitle("Timeline")
         }
     }
 }
