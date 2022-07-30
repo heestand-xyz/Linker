@@ -22,12 +22,11 @@ final class AuthServiceManager: ObservableObject, AuthService {
         service.userSubject
     }
     
-    let service: AuthService
+    private let service: AuthService
     
     init(service: AuthService) {
         
         self.service = service
-        authenticated = service.authenticated
         
         setup()
     }
@@ -38,6 +37,8 @@ final class AuthServiceManager: ObservableObject, AuthService {
 extension AuthServiceManager {
     
     private func setup() {
+        
+        authenticated = service.authenticated
         
         service.authenticatedSubject
             .receive(on: DispatchQueue.main)

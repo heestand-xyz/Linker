@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct TimelineView: View {
-    
+   
+    @ObservedObject var content: ContentServiceManager
+
     var body: some View {
     
         NavigationView {
             
-            Text("Timeline")
-                .navigationTitle("Linker")
+            List {
+                ForEach(content.posts) { post in
+                    PostView(post: post)
+                }
+            }
+            .navigationTitle("Linker")
         }
     }
 }
 
 struct TimelineView_Previews: PreviewProvider {
     static var previews: some View {
-        TimelineView()
+        TimelineView(content: .mocked)
     }
 }

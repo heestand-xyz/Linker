@@ -11,6 +11,8 @@ struct MainView: View {
     
     @ObservedObject var auth: AuthServiceManager
     
+    @ObservedObject var content: ContentServiceManager
+    
     @State private var requesting: Bool = false
     @State private var error: Error?
 
@@ -18,7 +20,7 @@ struct MainView: View {
         
         TabView {
             
-            TimelineView()
+            TimelineView(content: content)
                 .tabItem {
                     Image(systemName: "newspaper")
                 }
@@ -33,6 +35,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(auth: .mocked)
+        MainView(auth: .mocked, content: .mocked)
     }
 }

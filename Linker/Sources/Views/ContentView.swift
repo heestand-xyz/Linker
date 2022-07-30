@@ -11,11 +11,13 @@ struct ContentView: View {
     
     @ObservedObject var auth: AuthServiceManager
     
+    @ObservedObject var content: ContentServiceManager
+    
     var body: some View {
         
         if auth.authenticated == true {
             
-            MainView(auth: auth)
+            MainView(auth: auth, content: content)
             
         } else if auth.authenticated == false {
             
@@ -33,6 +35,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(auth: .mocked)
+        ContentView(auth: .mocked, content: .mocked)
     }
 }
