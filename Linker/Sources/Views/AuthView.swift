@@ -18,6 +18,7 @@ struct AuthView: View {
     }
     @State private var viewState: ViewState = .none
     
+    @State private var photo: UIImage?
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
@@ -34,18 +35,19 @@ struct AuthView: View {
                 Spacer()
                     .frame(height: 50)
                 
-                Image(systemName: "link")
-                    .font(.system(size: viewState == .none ? 100 : 75))
-                    .foregroundColor(.accentColor)
-                    .frame(height: 100)
-                
-                Text("Share Links")
-                    .bold()
-                    .foregroundColor(.accentColor)
-                    .opacity(viewState == .none ? 1.0 : 0.0)
+                if viewState == .none {
+                    
+                    Image(systemName: "link")
+                        .font(.system(size: 100))
+                        .foregroundColor(.accentColor)
+                        .frame(height: 100)
+                    
+                    Text("Share Links")
+                        .bold()
+                        .foregroundColor(.accentColor)
+                }
                 
                 Spacer()
-                    .frame(height: 75)
                 
                 fields()
                 
@@ -53,6 +55,7 @@ struct AuthView: View {
                 
                 buttons()
                 
+                Spacer()
                 Spacer()
                 
                 Text("Created by Anton Heestand")
@@ -84,8 +87,12 @@ struct AuthView: View {
         
         Group {
             
+            
             if viewState == .signUp {
                 
+                PhotoView(image: $photo)
+                    .frame(width: 100, height: 100)
+
                 TextField("Name", text: $name)
             }
             
@@ -94,9 +101,6 @@ struct AuthView: View {
                 TextField("Email", text: $email)
                     .textContentType(.emailAddress)
                     .autocorrectionDisabled()
-            }
-            
-            if [.signIn, .signUp].contains(viewState) {
                 
                 SecureField("Password", text: $password)
             }
@@ -186,7 +190,12 @@ struct AuthView: View {
         Task {
             do {
                 try await auth.signUp(email: email, password: password)
-                try await auth.changeName(name)
+                if name != "" {
+                    try await auth.changeName(name)
+                }
+                if let photo: UIImage = photo {
+                    try await auth.changePhoto(photo)
+                }
             } catch {
                 failed(with: error)
             }

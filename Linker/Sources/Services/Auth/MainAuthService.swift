@@ -12,13 +12,13 @@ import FirebaseStorage
 
 final class MainAuthService: AuthService {
     
-    var authenticated: Bool = false {
+    var authenticated: Bool? {
         didSet {
             authenticatedSubject.value = authenticated
         }
     }
     
-    lazy var authenticatedSubject = CurrentValueSubject<Bool, Never>(authenticated)
+    lazy var authenticatedSubject = CurrentValueSubject<Bool?, Never>(authenticated)
     
     private var handle: AuthStateDidChangeListenerHandle?
     
@@ -106,7 +106,7 @@ extension MainAuthService {
     
     func changePhoto(_ image: UIImage) async throws {
         
-        guard authenticated, let user = Auth.auth().currentUser else {
+        guard authenticated == true, let user = Auth.auth().currentUser else {
             throw AuthError.notAuthorized
         }
         
@@ -174,7 +174,7 @@ extension MainAuthService {
     
     func changeName(_ name: String) async throws {
         
-        guard authenticated, let user = Auth.auth().currentUser else {
+        guard authenticated == true, let user = Auth.auth().currentUser else {
             throw AuthError.notAuthorized
         }
         

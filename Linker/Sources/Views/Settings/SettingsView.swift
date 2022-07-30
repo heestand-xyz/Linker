@@ -12,18 +12,54 @@ struct SettingsView: View {
     @ObservedObject var auth: AuthServiceManager
     
     @State private var requestingSignOut: Bool = false
-    @State private var signOutError: Error?
 
     @State private var editingName: Bool = false
     @State private var name: String = ""
-    
+
+    @State private var photo: UIImage?
+    @State private var uploadingPhoto: Bool = false
+
     @FocusState private var nameFocus: Bool
+    
+    @State private var error: Error?
 
     var body: some View {
         
         NavigationView {
             
             VStack(alignment: .leading, spacing: 25) {
+                
+                Spacer()
+                
+                PhotoView(image: Binding<UIImage?>(get: {
+                    photo
+                }, set: { image, _ in
+                    guard let image = image else { return }
+                    uploadingPhoto = true
+                    Task {
+                        do {
+                            try await auth.changePhoto(image)
+                        } catch {
+                            failed(with: error)
+                        }
+                        DispatchQueue.main.async {
+                            uploadingPhoto = false
+                        }
+                    }
+                }))
+                .frame(width: 150, height: 150)
+                .overlay {
+                    if uploadingPhoto {
+                        ProgressView()
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .onAppear {
+                    photo = auth.user?.photo
+                }
+                .onChange(of: auth.user?.photo) { image in
+                    photo = image
+                }
                 
                 VStack(alignment: .leading) {
                     HStack {
@@ -32,7 +68,11 @@ struct SettingsView: View {
                         Button {
                             if editingName {
                                 Task {
-                                    try? await auth.changeName(name)
+                                    do {
+                                        try await auth.changeName(name)
+                                    } catch {
+                                        failed(with: error)
+                                    }
                                 }
                             }
                             editingName.toggle()
@@ -46,11 +86,14 @@ struct SettingsView: View {
                         TextField("Name", text: $name)
                             .onSubmit {
                                 Task {
-                                    try? await auth.changeName(name)
+                                    do {
+                                        try await auth.changeName(name)
+                                    } catch {
+                                        failed(with: error)
+                                    }
                                 }
                                 editingName = false
                             }
-                            .frame(width: 150)
                             .focused($nameFocus)
                     } else {
                         if let name = auth.user?.name {
@@ -74,7 +117,11 @@ struct SettingsView: View {
                             .opacity(0.75)
                     }
                 }
+                
+                Spacer()
+                Spacer()
             }
+            .frame(width: 250)
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -93,14 +140,14 @@ struct SettingsView: View {
             }
         }
         .alert(isPresented: Binding<Bool>(get: {
-            signOutError != nil
+            error != nil
         }, set: { isPresented, _ in
             if !isPresented {
-                signOutError = nil
+                error = nil
             }
         })) {
-            Alert(title: Text("Sign Out Error"),
-                  message: Text(signOutError?.localizedDescription ?? "Unknown Error"),
+            Alert(title: Text("Something went wrong"),
+                  message: Text(error?.localizedDescription ?? "Unknown Error"),
                   dismissButton: .default(Text("Ok")))
         }
     }
@@ -122,7 +169,7 @@ struct SettingsView: View {
     private func request() {
         withAnimation {
             requestingSignOut = true
-            signOutError = nil
+            error = nil
         }
     }
     
@@ -134,7 +181,7 @@ struct SettingsView: View {
     
     private func failed(with error: Error) {
         withAnimation {
-            signOutError = error
+            self.error = error
         }
     }
 }

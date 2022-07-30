@@ -10,13 +10,13 @@ import Combine
 
 final class MockedAuthService: AuthService {
     
-    var authenticated: Bool = false {
+    var authenticated: Bool? {
         didSet {
             authenticatedSubject.value = authenticated
         }
     }
 
-    lazy var authenticatedSubject = CurrentValueSubject<Bool, Never>(false)
+    lazy var authenticatedSubject = CurrentValueSubject<Bool?, Never>(authenticated)
     
     var user: AuthUser? {
         didSet {

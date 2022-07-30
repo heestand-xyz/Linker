@@ -10,8 +10,8 @@ import Combine
 
 protocol AuthService {
     
-    var authenticated: Bool { get set }
-    var authenticatedSubject: CurrentValueSubject<Bool, Never> { get }
+    var authenticated: Bool? { get set }
+    var authenticatedSubject: CurrentValueSubject<Bool?, Never> { get }
     
     var user: AuthUser? { get }
     var userSubject: CurrentValueSubject<AuthUser?, Never> { get }

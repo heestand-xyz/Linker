@@ -10,9 +10,9 @@ import Combine
 
 final class AuthServiceManager: ObservableObject, AuthService {
     
-    @Published var authenticated: Bool
+    @Published var authenticated: Bool?
     
-    var authenticatedSubject: CurrentValueSubject<Bool, Never> {
+    var authenticatedSubject: CurrentValueSubject<Bool?, Never> {
         service.authenticatedSubject
     }
     
@@ -23,8 +23,6 @@ final class AuthServiceManager: ObservableObject, AuthService {
     }
     
     let service: AuthService
-    
-    private var cancelBag: Set<AnyCancellable> = []
     
     init(service: AuthService) {
         
@@ -42,22 +40,12 @@ extension AuthServiceManager {
     private func setup() {
         
         service.authenticatedSubject
-            .sink { [weak self] authenticated in
-                
-                DispatchQueue.main.async {
-                    self?.authenticated = authenticated
-                }
-            }
-            .store(in: &cancelBag)
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$authenticated)
         
         service.userSubject
-            .sink { [weak self] user in
-                
-                DispatchQueue.main.async {
-                    self?.user = user
-                }
-            }
-            .store(in: &cancelBag)
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$user)
     }
 }
 

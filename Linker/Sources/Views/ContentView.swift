@@ -13,13 +13,23 @@ struct ContentView: View {
     
     var body: some View {
         
-        if auth.authenticated {
+        if auth.authenticated == true {
             
             MainView(auth: auth)
             
-        } else {
+        } else if auth.authenticated == false {
             
             AuthView(auth: auth)
+            
+        } else {
+            
+            NavigationView {
+                VStack(spacing: 10) {
+                    ProgressView()
+                    Text("Loading...")
+                }
+                .navigationTitle("Linker")
+            }
         }
     }
 }

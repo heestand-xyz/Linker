@@ -14,6 +14,9 @@
 		D30C19A4289441DC002561CD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C19A3289441DC002561CD /* SettingsView.swift */; };
 		D30C19A628944212002561CD /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C19A528944212002561CD /* TimelineView.swift */; };
 		D378A0B8289170B10052D312 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D378A0B7289170B10052D312 /* MainView.swift */; };
+		D3DB27A928951A7D00398FD8 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB27A828951A7D00398FD8 /* PhotoView.swift */; };
+		D3DB27AB28951C8900398FD8 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB27AA28951C8900398FD8 /* PhotoPickerView.swift */; };
+		D3DB27AE28951FF200398FD8 /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB27AD28951FF200398FD8 /* UIImage+resize.swift */; };
 		D3DC755028916A6B00A74663 /* AuthServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC754F28916A6B00A74663 /* AuthServiceManager.swift */; };
 		D3E8EE7728915B0C0063C2D3 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8EE7628915B0C0063C2D3 /* LinkView.swift */; };
 		D3E8EE7A289163C80063C2D3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3E8EE79289163C80063C2D3 /* FirebaseAnalyticsSwift */; };
@@ -49,6 +52,9 @@
 		D30C19A3289441DC002561CD /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D30C19A528944212002561CD /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		D378A0B7289170B10052D312 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D3DB27A828951A7D00398FD8 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		D3DB27AA28951C8900398FD8 /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
+		D3DB27AD28951FF200398FD8 /* UIImage+resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
 		D3DC754D289168FB00A74663 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3DC754F28916A6B00A74663 /* AuthServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceManager.swift; sourceTree = "<group>"; };
 		D3E8EE7628915B0C0063C2D3 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
@@ -135,6 +141,23 @@
 			path = Timeline;
 			sourceTree = "<group>";
 		};
+		D3DB27A728951A7100398FD8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D3DB27A828951A7D00398FD8 /* PhotoView.swift */,
+				D3DB27AA28951C8900398FD8 /* PhotoPickerView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D3DB27AC28951FDE00398FD8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3DB27AD28951FF200398FD8 /* UIImage+resize.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D3E8EE7428915AF40063C2D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +167,7 @@
 				D378A0B6289170A60052D312 /* Timeline */,
 				D30C19A728944222002561CD /* Settings */,
 				D3E8EE7528915AFA0063C2D3 /* Link */,
+				D3DB27A728951A7100398FD8 /* Shared */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +187,7 @@
 				D3E8EE8B289164E30063C2D3 /* AppDelegate.swift */,
 				D3E8EE8D289165FD0063C2D3 /* Services */,
 				D3E8EE7428915AF40063C2D3 /* Views */,
+				D3DB27AC28951FDE00398FD8 /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -314,9 +339,12 @@
 				D3E8EE7728915B0C0063C2D3 /* LinkView.swift in Sources */,
 				D3074A3C28915A6900062B45 /* LinkerApp.swift in Sources */,
 				D3E8EE92289166920063C2D3 /* MockedAuthService.swift in Sources */,
+				D3DB27A928951A7D00398FD8 /* PhotoView.swift in Sources */,
 				D30C19A4289441DC002561CD /* SettingsView.swift in Sources */,
 				D3E8EE8F2891661B0063C2D3 /* AuthService.swift in Sources */,
 				D3FFAFB62892A1BB00EB22F4 /* AuthUser.swift in Sources */,
+				D3DB27AE28951FF200398FD8 /* UIImage+resize.swift in Sources */,
+				D3DB27AB28951C8900398FD8 /* PhotoPickerView.swift in Sources */,
 				D30C19A628944212002561CD /* TimelineView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

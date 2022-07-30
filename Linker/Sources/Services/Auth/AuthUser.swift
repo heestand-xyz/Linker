@@ -21,7 +21,7 @@ extension AuthUser {
         name = user.displayName
         email = user.email ?? ""
         if let url = user.photoURL {
-            photo = try await AuthUser.downloadPhoto(url: url)
+            photo = try? await AuthUser.downloadPhoto(url: url)
         }
     }
 }
