@@ -24,11 +24,8 @@ struct ContentView: View {
         } else {
             
             NavigationView {
-                VStack(spacing: 10) {
-                    ProgressView()
-                    Text("Loading...")
-                }
-                .navigationTitle("Linker")
+                ProgressView()
+                    .navigationTitle("Linker")
             }
         }
     }

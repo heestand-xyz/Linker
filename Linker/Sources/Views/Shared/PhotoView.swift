@@ -45,21 +45,29 @@ struct PhotoView: View {
         }
         .aspectRatio(1.0, contentMode: .fit)
         .actionSheet(isPresented: $showPicker) {
-            ActionSheet(title: Text("Profile Photo"), buttons: [
-                .default(Text("Photos"), action: {
+            ActionSheet(title: Text("Profile Photo"), buttons: {
+                var buttons: [ActionSheet.Button] = []
+                buttons.append(.default(Text("Photos"), action: {
                     showPhotoPicker = true
-                }),
-                .default(Text("Camera"), action: {
+                }))
+                #if !targetEnvironment(simulator)
+                buttons.append(.default(Text("Camera"), action: {
                     showCameraPicker = true
-                }),
-                .cancel()
-            ])
+                }))
+                #endif
+                buttons.append(.cancel())
+                return buttons
+            }())
         }
         .sheet(isPresented: $showPhotoPicker) {
             PhotoPickerView(sourceType: .photoLibrary, selectedImage: $image)
         }
-        .sheet(isPresented: $showCameraPicker) {
-            PhotoPickerView(sourceType: .camera, selectedImage: $image)
+        .fullScreenCover(isPresented: $showCameraPicker) {
+            ZStack {
+                Color.black
+                    .ignoresSafeArea()
+                PhotoPickerView(sourceType: .camera, selectedImage: $image)
+            }
         }
     }
 }
