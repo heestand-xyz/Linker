@@ -4,6 +4,8 @@
 
 a social media mini app.
 
-## Requirements
+## Minimum Requirements
+
+iOS 15.0
 
 Xcode 13.4

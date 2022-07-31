@@ -87,7 +87,6 @@ struct AuthView: View {
         
         Group {
             
-            
             if viewState == .signUp {
                 
                 PhotoView(image: $photo)
@@ -100,7 +99,7 @@ struct AuthView: View {
                 
                 TextField("Email", text: $email)
                     .textContentType(.emailAddress)
-                    .autocorrectionDisabled()
+                    .disableAutocorrection(true)
                 
                 SecureField("Password", text: $password)
             }

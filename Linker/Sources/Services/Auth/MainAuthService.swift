@@ -153,11 +153,6 @@ extension MainAuthService {
                     return
                 }
                 
-                guard let metadata = metadata else {
-                    continuation.resume(throwing: AuthError.badMetadata)
-                    return
-                }
-                                
                 reference.downloadURL { (url, error) in
                     
                     guard let url: URL = url else {

@@ -46,6 +46,6 @@ extension Array where Element == Post {
         Post(user: Post.User(name: "Tester", id: "test"),
              date: .now,
              url: URL(string: "https://nanameue.jp/")!,
-             text: "Hellor"),
+             text: "Hello"),
     ]
 }
