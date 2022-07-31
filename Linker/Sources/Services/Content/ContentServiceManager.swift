@@ -40,6 +40,15 @@ extension ContentServiceManager {
     }
 }
 
+// MARK: - Service
+
+extension ContentServiceManager {
+    
+    func create(post: Post) async throws {
+        try await service.create(post: post)
+    }
+}
+
 // MARK: - Mock
 
 extension ContentServiceManager {

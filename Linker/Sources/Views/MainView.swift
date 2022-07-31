@@ -20,7 +20,7 @@ struct MainView: View {
         
         TabView {
             
-            TimelineView(content: content)
+            TimelineView(auth: auth, content: content)
                 .tabItem {
                     Label {
                         Text("Timeline")

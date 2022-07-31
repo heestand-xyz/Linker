@@ -10,6 +10,7 @@ import FirebaseAuth
 
 struct AuthUser {
     
+    var id: String
     var name: String?
     var email: String
     var photo: UIImage?
@@ -18,6 +19,7 @@ struct AuthUser {
 extension AuthUser {
     
     init(user: User) async throws {
+        id = user.uid
         name = user.displayName
         email = user.email ?? ""
         if let url = user.photoURL {

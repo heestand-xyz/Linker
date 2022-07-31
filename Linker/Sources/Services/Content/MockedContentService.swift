@@ -17,4 +17,20 @@ final class MockedContentService: ContentService {
     }
     
     lazy var postsSubject = CurrentValueSubject<[Post], Never>(posts)
+    
+    func create(post: Post) async throws {
+        
+        await delay()
+        
+        posts.append(post)
+    }
+    
+    private func delay() async {
+        
+        await withCheckedContinuation { continuation in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                continuation.resume()
+            }
+        }
+    }
 }

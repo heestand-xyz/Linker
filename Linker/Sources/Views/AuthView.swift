@@ -100,6 +100,9 @@ struct AuthView: View {
                 TextField("Email", text: $email)
                     .textContentType(.emailAddress)
                     .disableAutocorrection(true)
+                    .onChange(of: email, perform: { email in
+                        self.email = email.lowercased()
+                    })
                 
                 SecureField("Password", text: $password)
             }

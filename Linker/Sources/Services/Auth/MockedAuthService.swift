@@ -31,7 +31,7 @@ final class MockedAuthService: AuthService {
         await delay()
         
         authenticated = true
-        self.user = AuthUser(email: email)
+        self.user = AuthUser(id: "mock", email: email)
     }
     
     func signOut() async throws {
@@ -47,7 +47,7 @@ final class MockedAuthService: AuthService {
         await delay()
         
         authenticated = true
-        self.user = AuthUser(email: email)
+        self.user = AuthUser(id: "mock", email: email)
     }
     
     func changePhoto(_ image: UIImage) async throws {
