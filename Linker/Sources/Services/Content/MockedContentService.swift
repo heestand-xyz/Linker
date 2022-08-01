@@ -32,6 +32,13 @@ final class MockedContentService: ContentService {
         posts.append(post)
     }
     
+    func delete(post: Post) async throws {
+        
+        await delay()
+        
+        posts.removeAll(where: { $0.id == post.id })
+    }
+    
     private func delay() async {
         
         await withCheckedContinuation { continuation in

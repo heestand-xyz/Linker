@@ -15,4 +15,5 @@ protocol ContentService {
     
     func refresh() async throws
     func create(post: Post) async throws
+    func delete(post: Post) async throws
 }

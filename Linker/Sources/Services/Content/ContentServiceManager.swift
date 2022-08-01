@@ -51,6 +51,10 @@ extension ContentServiceManager {
     func create(post: Post) async throws {
         try await service.create(post: post)
     }
+    
+    func delete(post: Post) async throws {
+        try await service.delete(post: post)
+    }
 }
 
 // MARK: - Mock

@@ -20,24 +20,21 @@ struct TimelineView: View {
             
             ZStack {
                 
-                ScrollView {
+                List {
+                       
+                    let posts: [Post] = content.posts.sorted(by: { leadingPost, trailingPost in
+                        leadingPost.date > trailingPost.date
+                    })
                     
-                    VStack {
+                    ForEach(posts) { post in
                         
-                        let posts: [Post] = content.posts.sorted(by: { leadingPost, trailingPost in
-                            leadingPost.date > trailingPost.date
-                        })
-                        
-                        ForEach(posts) { post in
-                            
-                            PostView(post: post)
-                            
-                            Divider()
-                                .padding(.horizontal)
-                        }
+                        PostView(auth: auth, content: content, post: post)
                     }
                 }
-                .navigationTitle("Linker")
+                .listStyle(.plain)
+                .refreshable {
+                    try? await content.refresh()
+                }
                 
                 AddButton {
                     composing = true
@@ -47,6 +44,7 @@ struct TimelineView: View {
                        maxHeight: .infinity,
                        alignment: .bottomTrailing)
             }
+            .navigationTitle("Linker")
         }
         .sheet(isPresented: $composing) {
             ComposeView(auth: auth, content: content)

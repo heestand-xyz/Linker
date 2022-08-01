@@ -114,4 +114,11 @@ extension MainContentService {
         
         posts.append(post)
     }
+    
+    func delete(post: Post) async throws {
+        
+        try await database.collection("Post").document(post.id).delete()
+        
+        posts.removeAll(where: { $0.id == post.id })
+    }
 }
