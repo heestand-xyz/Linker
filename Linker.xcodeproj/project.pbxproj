@@ -25,6 +25,7 @@
 		D3DB27AB28951C8900398FD8 /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB27AA28951C8900398FD8 /* PhotoPickerView.swift */; };
 		D3DB27AE28951FF200398FD8 /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB27AD28951FF200398FD8 /* UIImage+resize.swift */; };
 		D3DC755028916A6B00A74663 /* AuthServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC754F28916A6B00A74663 /* AuthServiceManager.swift */; };
+		D3DF09CB2897E7EE00E743D2 /* MainContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF09CA2897E7EE00E743D2 /* MainContentService.swift */; };
 		D3E8EE7728915B0C0063C2D3 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8EE7628915B0C0063C2D3 /* LinkView.swift */; };
 		D3E8EE7A289163C80063C2D3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3E8EE79289163C80063C2D3 /* FirebaseAnalyticsSwift */; };
 		D3E8EE7C289163C80063C2D3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D3E8EE7B289163C80063C2D3 /* FirebaseAuth */; };
@@ -71,6 +72,7 @@
 		D3DB27AD28951FF200398FD8 /* UIImage+resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
 		D3DC754D289168FB00A74663 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3DC754F28916A6B00A74663 /* AuthServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceManager.swift; sourceTree = "<group>"; };
+		D3DF09CA2897E7EE00E743D2 /* MainContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentService.swift; sourceTree = "<group>"; };
 		D3E8EE7628915B0C0063C2D3 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		D3E8EE892891646F0063C2D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3E8EE8B289164E30063C2D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				D3A6B0FA28956E8600BE0041 /* Post.swift */,
 				D3A6B0F828956E4B00BE0041 /* ContentService.swift */,
 				D3A6B0FE28956FE400BE0041 /* ContentServiceManager.swift */,
+				D3DF09CA2897E7EE00E743D2 /* MainContentService.swift */,
 				D3A6B0FC28956EF500BE0041 /* MockedContentService.swift */,
 			);
 			path = Content;
@@ -363,6 +366,7 @@
 				D3FFAFB428929F5E00EB22F4 /* MainAuthService.swift in Sources */,
 				D3E8EE952891684B0063C2D3 /* AuthView.swift in Sources */,
 				D378A0B8289170B10052D312 /* MainView.swift in Sources */,
+				D3DF09CB2897E7EE00E743D2 /* MainContentService.swift in Sources */,
 				D3DC755028916A6B00A74663 /* AuthServiceManager.swift in Sources */,
 				D3E8EE8C289164E30063C2D3 /* AppDelegate.swift in Sources */,
 				D3074A3E28915A6900062B45 /* ContentView.swift in Sources */,

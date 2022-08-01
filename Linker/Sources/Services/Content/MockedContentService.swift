@@ -18,6 +18,13 @@ final class MockedContentService: ContentService {
     
     lazy var postsSubject = CurrentValueSubject<[Post], Never>(posts)
     
+    func refresh() async throws {
+        
+        await delay()
+        
+        posts = [.mocked]
+    }
+    
     func create(post: Post) async throws {
         
         await delay()

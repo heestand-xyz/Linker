@@ -18,7 +18,7 @@ struct TimelineView: View {
     
         NavigationView {
             
-            ZStack(alignment: .bottomTrailing) {
+            ZStack {
                 
                 ScrollView {
                     
@@ -33,15 +33,19 @@ struct TimelineView: View {
                             PostView(post: post)
                             
                             Divider()
+                                .padding(.horizontal)
                         }
                     }
                 }
-                .navigationTitle("Timeline")
+                .navigationTitle("Linker")
                 
                 AddButton {
                     composing = true
                 }
                 .padding(20)
+                .frame(maxWidth: .infinity,
+                       maxHeight: .infinity,
+                       alignment: .bottomTrailing)
             }
         }
         .sheet(isPresented: $composing) {

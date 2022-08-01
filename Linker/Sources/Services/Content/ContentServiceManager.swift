@@ -44,6 +44,10 @@ extension ContentServiceManager {
 
 extension ContentServiceManager {
     
+    func refresh() async throws {
+        try await service.refresh()
+    }
+    
     func create(post: Post) async throws {
         try await service.create(post: post)
     }

@@ -13,5 +13,6 @@ protocol ContentService {
     var posts: [Post] { get set }
     var postsSubject: CurrentValueSubject<[Post], Never> { get }
     
+    func refresh() async throws
     func create(post: Post) async throws
 }

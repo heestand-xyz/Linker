@@ -14,7 +14,7 @@ struct LinkerApp: App {
     
     @StateObject var auth = AuthServiceManager(service: MainAuthService())
     
-    @StateObject var content = ContentServiceManager(service: MockedContentService())
+    @StateObject var content = ContentServiceManager(service: MainContentService())
 
     var body: some Scene {
         WindowGroup {

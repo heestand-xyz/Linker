@@ -58,6 +58,8 @@ final class MainAuthService: AuthService {
     }
 }
 
+// MARK: - Service
+
 extension MainAuthService {
     
     enum AuthError: Error {
@@ -86,6 +88,8 @@ extension MainAuthService {
     func signOut() async throws {
         
         try Auth.auth().signOut()
+        
+        user = nil
     }
     
     func signUp(email: String, password: String) async throws {

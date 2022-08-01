@@ -19,11 +19,11 @@ struct ComposeView: View {
     @State private var link: String = ""
     var formattedLink: String {
         guard link != "" else { return "" }
-        guard link.contains(".") else { return "" }
+        guard link.contains(".") && link.last != "." else { return "" }
         if link.starts(with: "http") {
             return link
         } else {
-            return "http://\(link)"
+            return "https://\(link)"
         }
     }
     @State private var validLink: Bool = false
@@ -72,11 +72,15 @@ struct ComposeView: View {
                 Button {
                     createPost()
                 } label: {
-                    Text("Post Link")
-                        .frame(maxWidth: .infinity)
+                    Label {
+                        Text("Post Link")
+                    } icon: {
+                        Image(systemName: "paperplane.fill")
+                    }
+                    .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
-                .disabled(requesting)
+                .disabled(requesting || formattedLink == "" || text == "")
                 
             }
             .padding()
@@ -122,7 +126,7 @@ struct ComposeView: View {
         }
         
         let postUser = Post.User(name: user.name ?? "Unknown", id: user.id)
-        let post = Post(user: postUser, url: url, text: text)
+        let post = Post(id: UUID().uuidString, user: postUser, url: url, text: text)
         
         withAnimation {
             requesting = true
