@@ -33,15 +33,21 @@ struct PostView: View {
             LinkView(url: post.url)
             
             HStack {
+
                 Text(post.date, format: .dateTime)
+
                 Spacer()
+
                 Text("by \(post.user.name)")
+
                 if isAuthor {
+
                     Button {
                         showDeletionConfirmation = true
                     } label: {
                         Image(systemName: "trash")
                     }
+                    .buttonStyle(.borderless)
                     .foregroundColor(.red)
                 }
             }
