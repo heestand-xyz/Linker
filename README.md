@@ -18,13 +18,30 @@ You can delete your own posted links.
 
 ## Setup
 
-To run the app, open the project in Xcode 13.4 or later. Select a team under Signing & Capabilities. Select a simulator or device with iOS 15 or later. Run the app and sign up for an account, alternately sign in with the test account `tester@test.com` and password `123Abc!`.
+- To run the app, open the project in Xcode 13.4 or later.
+- Select a team under Signing & Capabilities.
+- Select a simulator or device with iOS 15 or later.
+- Run the app and sign up for an account.
+
+Alternately sign in with the test account `tester@test.com` and password `123Abc!`.
+
+## Architecture
+
+**Linker** uses dependency injection with services. There are two main services, `Auth` and `Content`. `Auth` is used to sign-in, sign-up and sign-out a user and `Content` is used to fetch, create and delete posts.
+
+The service manager can take a mocked or a main service, making it easy to switch between mocked and production mode. 
+
+## Dependencies
+
+**Linker** is powered by Firebase. This swift package dependency should automatically download.
+
+The app uses SwiftUI for the UI. Then is uses Combine and async / await for business logic and network calls.  
 
 ## Tests
 
 There are unit tests under `LinkerTests/LinkerTests.swift`.
 
-These tests verify that the app works as expected.  
+These tests verify that the app works as expected.
 
 ## Minimum Requirements
 
