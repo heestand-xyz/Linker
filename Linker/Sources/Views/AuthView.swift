@@ -10,7 +10,8 @@ import SwiftUI
 struct AuthView: View {
     
     @ObservedObject var auth: AuthServiceManager
-    
+    @ObservedObject var content: ContentServiceManager
+
     private enum ViewState {
         case none
         case signIn
@@ -180,6 +181,7 @@ struct AuthView: View {
         Task {
             do {
                 try await auth.signIn(email: email, password: password)
+                try await content.refresh()
             } catch {
                 failed(with: error)
             }
@@ -198,6 +200,7 @@ struct AuthView: View {
                 if let photo: UIImage = photo {
                     try await auth.changePhoto(photo)
                 }
+                try await content.refresh()
             } catch {
                 failed(with: error)
             }
@@ -233,6 +236,6 @@ struct AuthView: View {
 
 struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthView(auth: .mocked)
+        AuthView(auth: .mocked, content: .mocked)
     }
 }

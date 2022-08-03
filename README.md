@@ -2,7 +2,23 @@
 
 # Linker
 
-a social media mini app.
+a mini social media app.
+
+## Description
+
+In **Linker** you can posts links with a description.
+
+Links are presented in a rich context with images from the website link. 
+
+You can create an account and add a profile photo.
+
+You can delete your own posted links.
+
+## Tests
+
+There are unit tests under `LinkerTests/LinkerTests.swift`.
+
+These tests verify that the app works as expected.  
 
 ## Minimum Requirements
 

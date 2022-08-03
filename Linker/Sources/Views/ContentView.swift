@@ -21,7 +21,7 @@ struct ContentView: View {
             
         } else if auth.authenticated == false {
             
-            AuthView(auth: auth)
+            AuthView(auth: auth, content: content)
             
         } else {
             

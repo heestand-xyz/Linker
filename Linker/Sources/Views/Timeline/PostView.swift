@@ -55,7 +55,8 @@ struct PostView: View {
             .padding(.horizontal, 4)
             .opacity(0.5)
         }
-        .padding()
+        .padding(.vertical, 10)
+        .padding(.trailing, 15)
         .frame(maxWidth: .infinity, alignment: .leading)
         .actionSheet(isPresented: $showDeletionConfirmation, content: {
             ActionSheet(title: Text("Delete Post"), message: Text(post.text), buttons: [
