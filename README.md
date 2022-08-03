@@ -35,7 +35,7 @@ The service manager can take a mocked or a main service, making it easy to switc
 
 **Linker** is powered by Firebase. This swift package dependency should automatically download.
 
-The app uses SwiftUI for the UI. Then is uses Combine and async / await for business logic and network calls.  
+The app uses SwiftUI for the UI. The app also uses Combine and async / await for business logic and network calls.  
 
 ## Tests
 
