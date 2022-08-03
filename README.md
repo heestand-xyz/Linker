@@ -16,6 +16,10 @@ You can create an account and add a profile photo.
 
 You can delete your own posted links.
 
+## Setup
+
+To run the app, open the project in Xcode 13.4 or later. Select a team under Signing & Capabilities. Select a simulator or device with iOS 15 or later. Run the app and sign up for an account, alternately sign in with the test account `tester@test.com` and password `123Abc!`.
+
 ## Tests
 
 There are unit tests under `LinkerTests/LinkerTests.swift`.
