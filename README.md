@@ -4,6 +4,8 @@
 
 a mini social media app.
 
+<img src="https://github.com/heestand-xyz/Linker/blob/main/Assets/Linker-Screenshot-1.png?raw=true" width="256"/> <img src="https://github.com/heestand-xyz/Linker/blob/main/Assets/Linker-Screenshot-2.png?raw=true" width="256"/>
+
 ## Description
 
 In **Linker** you can posts links with a description.
